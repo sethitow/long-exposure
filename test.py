@@ -16,20 +16,9 @@ print(f"Number of Frames: {num_of_frames}")
 
 stack = np.zeros(img_shape)
 
-for x in range(0, img_shape[0]):
-	for y in range(0, img_shape[1]):
-		print(f"{x}, {y}")
-		data = copy.deepcopy(videodata)
-		tuples = []
-		rms = []
-		for frame in data.nextFrame():
-			tuples.append(frame[x,y])
-			rms.append(np.sqrt(np.mean(np.square(frame[x,y]))))
-		value = tuples[rms.index(max(rms))]
-		stack[x,y] = value
-		print(value)
+for frame in videodata:
+	stack = stack + frame
 				
-
 stack = stack / num_of_frames / 255
 
 ski.imsave('test.png', stack)
