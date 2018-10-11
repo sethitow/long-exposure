@@ -5,7 +5,7 @@ import numpy as np
 import copy
 
 print('Opening video file')
-videodata = skv.FFmpegReader('spxl.mov')
+videodata = skv.vread('spxl.mov')
 # videodata = skv.vread(skvideo.datasets.bigbuckbunny())
 shape = videodata.shape
 num_of_frames = shape[0]
