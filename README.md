@@ -1,4 +1,4 @@
-![Attempted long exposure](every_frame.png)
+![Attempted long exposure](results/every_frame.png)
 
 An attempt to create a long exposure of the SpaceX launch video I took at Vandenberg AFB.
 
